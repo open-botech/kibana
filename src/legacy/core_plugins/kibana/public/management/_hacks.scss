@@ -26,4 +26,6 @@ kbn-management-objects-view {
 // Hack because the management wrapper is flat HTML and needs a class
 .mgtPage__body {
   flex: 1;
+  width:100%;
+  max-width: none;
 }
