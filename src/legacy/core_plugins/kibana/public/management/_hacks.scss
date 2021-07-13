@@ -25,5 +25,5 @@ kbn-management-objects-view {
 
 // Hack because the management wrapper is flat HTML and needs a class
 .mgtPage__body {
-  max-width: map-get($euiBreakpoints, 'xl');
+  flex: 1;
 }
