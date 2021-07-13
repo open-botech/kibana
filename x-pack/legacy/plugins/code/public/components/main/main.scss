@@ -97,6 +97,10 @@
     border-radius: 0;
   }
 }
+// new 
+.euiPanel{
+  width:100% !important;
+}
 
 .euiPanel.code-timeline__commit--root {
   display: flex;
