@@ -7,13 +7,15 @@
   top: 0;
   z-index: 10;
   display:none !important;
+  // herechange
 }
 
 .chrHeaderWrapper ~ .app-wrapper:not(.hidden-chrome) {
   // top: $euiHeaderChildSize;
   // left: $euiHeaderChildSize;
-  top:10px; 
-  left:10px;
+  // herechange
+  top:0px; 
+  left:0px;
   // HOTFIX: Temporary fix for flyouts not inside portals
   // SASSTODO: Find an actual solution
   .euiFlyout {
