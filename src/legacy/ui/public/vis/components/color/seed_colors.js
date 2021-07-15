@@ -24,7 +24,7 @@
 */
 
 export const seedColors = [
-  '#00a69b',
+  '#1d6bfa',
   '#57c17b',
   '#6f87d8',
   '#663db8',
