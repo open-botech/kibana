@@ -25,7 +25,7 @@
 #server.name: "your-hostname"
 
 # The URLs of the Elasticsearch instances to use for all your queries.
-elasticsearch.hosts: ["http://172.16.1.192:9200"]
+elasticsearch.hosts: ["http://8.135.49.240:9200"]
 
 # When this setting's value is true Kibana uses the hostname specified in the server.host
 # setting. When the value of this setting is false, Kibana uses the hostname of the host
@@ -111,4 +111,4 @@ elasticsearch.password: "123456"
 
 # Specifies locale to be used for all localizable strings, dates and number formats.
 # Supported languages are the following: English - en , by default , Chinese - zh-CN .
-#i18n.locale: "en"
+i18n.locale: "zh-CN"
