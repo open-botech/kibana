@@ -29,59 +29,59 @@ function getTabs(disableLinks: boolean): Tab[] {
       }),
       disabled: disableLinks,
     },
-    {
-      id: 'explorer',
-      name: i18n.translate('xpack.ml.navMenu.anomalyExplorerTabLinkText', {
-        defaultMessage: 'Anomaly Explorer',
-      }),
-      disabled: disableLinks,
-    },
-    {
-      id: 'timeseriesexplorer',
-      name: i18n.translate('xpack.ml.navMenu.singleMetricViewerTabLinkText', {
-        defaultMessage: 'Single Metric Viewer',
-      }),
-      disabled: disableLinks,
-    },
-    {
-      id: 'data_frames',
-      name: i18n.translate('xpack.ml.navMenu.dataFrameTabLinkText', {
-        defaultMessage: 'Transforms',
-      }),
-      disabled: false,
-    },
-    {
-      id: 'data_frame_analytics',
-      name: i18n.translate('xpack.ml.navMenu.dataFrameAnalyticsTabLinkText', {
-        defaultMessage: 'Analytics',
-      }),
-      disabled: disableLinks,
-    },
-    {
-      id: 'datavisualizer',
-      name: i18n.translate('xpack.ml.navMenu.dataVisualizerTabLinkText', {
-        defaultMessage: 'Data Visualizer',
-      }),
-      disabled: false,
-    },
-    {
-      id: 'settings',
-      name: i18n.translate('xpack.ml.navMenu.settingsTabLinkText', {
-        defaultMessage: 'Settings',
-      }),
-      disabled: disableLinks,
-    },
+    // {
+    //   id: 'explorer',
+    //   name: i18n.translate('xpack.ml.navMenu.anomalyExplorerTabLinkText', {
+    //     defaultMessage: 'Anomaly Explorer',
+    //   }),
+    //   disabled: disableLinks,
+    // },
+    // {
+    //   id: 'timeseriesexplorer',
+    //   name: i18n.translate('xpack.ml.navMenu.singleMetricViewerTabLinkText', {
+    //     defaultMessage: 'Single Metric Viewer',
+    //   }),
+    //   disabled: disableLinks,
+    // },
+    // {
+    //   id: 'data_frames',
+    //   name: i18n.translate('xpack.ml.navMenu.dataFrameTabLinkText', {
+    //     defaultMessage: 'Transforms',
+    //   }),
+    //   disabled: false,
+    // },
+    // {
+    //   id: 'data_frame_analytics',
+    //   name: i18n.translate('xpack.ml.navMenu.dataFrameAnalyticsTabLinkText', {
+    //     defaultMessage: 'Analytics',
+    //   }),
+    //   disabled: disableLinks,
+    // },
+    // {
+    //   id: 'datavisualizer',
+    //   name: i18n.translate('xpack.ml.navMenu.dataVisualizerTabLinkText', {
+    //     defaultMessage: 'Data Visualizer',
+    //   }),
+    //   disabled: false,
+    // },
+    // {
+    //   id: 'settings',
+    //   name: i18n.translate('xpack.ml.navMenu.settingsTabLinkText', {
+    //     defaultMessage: 'Settings',
+    //   }),
+    //   disabled: disableLinks,
+    // },
   ];
 }
 
 enum TAB_TEST_SUBJECT {
   jobs = 'mlTabJobManagement',
-  explorer = 'mlTabAnomalyExplorer',
-  timeseriesexplorer = 'mlTabSingleMetricViewer',
-  data_frames = 'mlTabDataFrames', // eslint-disable-line
-  data_frame_analytics = 'mlTabDataFrameAnalytics', // eslint-disable-line
-  datavisualizer = 'mlTabDataVisualizer',
-  settings = 'mlTabSettings',
+  // explorer = 'mlTabAnomalyExplorer',
+  // timeseriesexplorer = 'mlTabSingleMetricViewer',
+  // data_frames = 'mlTabDataFrames', // eslint-disable-line
+  // data_frame_analytics = 'mlTabDataFrameAnalytics', // eslint-disable-line
+  // datavisualizer = 'mlTabDataVisualizer',
+  // settings = 'mlTabSettings',
 }
 
 type TAB_TEST_SUBJECTS = keyof typeof TAB_TEST_SUBJECT;
