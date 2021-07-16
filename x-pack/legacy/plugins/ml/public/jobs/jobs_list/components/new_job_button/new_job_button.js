@@ -25,6 +25,7 @@ export function NewJobButton() {
   return (
     <EuiButton
       data-test-subj="mlCreateNewJobButton"
+      style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)', borderColor: '#66b1ff' }}
       onClick={newJob}
       size="s"
       disabled={(buttonEnabled === false)}

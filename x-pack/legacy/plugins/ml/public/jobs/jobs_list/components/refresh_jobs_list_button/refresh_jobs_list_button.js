@@ -13,10 +13,12 @@ import {
   EuiButtonEmpty,
 } from '@elastic/eui';
 import { FormattedMessage } from '@kbn/i18n/react';
+const co = '#409EFF';
 
 
 export const RefreshJobsListButton = ({ onRefreshClick, isRefreshing }) => (
   <EuiButtonEmpty
+    style={{ color: co, letterSpacing: '1px' }}
     data-test-subj="mlRefreshJobListButton"
     onClick={onRefreshClick}
     isLoading={isRefreshing}

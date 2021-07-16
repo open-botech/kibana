@@ -144,7 +144,7 @@ exports[`ErrorGroupOverview -> List should render empty state 1`] = `
               data-test-subj="tableHeaderCell_message_1"
               role="columnheader"
               scope="col"
-              width="50%"
+              width="30%"
             >
               <div
                 className="euiTableCellContent"

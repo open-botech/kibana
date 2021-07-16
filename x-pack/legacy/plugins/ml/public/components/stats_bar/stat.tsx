@@ -17,7 +17,7 @@ interface StatProps {
 
 export const Stat: FC<StatProps> = ({ stat }) => {
   return (
-    <span className="stat">
+    <span className="stat" style={{ display: stat.label.includes('ML') ? 'none' : '' }}>
       <span>{stat.label}</span>: <span className="stat-value">{stat.value}</span>
     </span>
   );

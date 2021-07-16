@@ -180,7 +180,8 @@ class JobsListUI extends Component {
         }),
         sortable: true,
         truncateText: false,
-        width: '20%',
+        // herechange
+        width: '15%',
         render: isManagementTable ? (id) => this.getJobIdLink(id) : undefined,
       }, {
         field: 'auditMessage',
@@ -200,7 +201,8 @@ class JobsListUI extends Component {
           <JobDescription job={item} />
         ),
         textOnly: true,
-        width: '20%'
+        // herechange
+        width: '15%'
       }, {
         field: 'processed_record_count',
         'data-test-subj': 'recordCount',
