@@ -73,7 +73,7 @@ export const IndexManagementHome: React.FunctionComponent<RouteComponentProps<Ma
                 />
               </h1>
             </EuiFlexItem>
-            <EuiFlexItem grow={false}>
+            {/* <EuiFlexItem grow={false}>
               <EuiButtonEmpty
                 href={idxMgmtDocumentationLink}
                 target="_blank"
@@ -85,7 +85,7 @@ export const IndexManagementHome: React.FunctionComponent<RouteComponentProps<Ma
                   defaultMessage="Index Management docs"
                 />
               </EuiButtonEmpty>
-            </EuiFlexItem>
+            </EuiFlexItem> */}
           </EuiFlexGroup>
         </EuiTitle>
 

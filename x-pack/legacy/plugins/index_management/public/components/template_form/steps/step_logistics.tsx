@@ -61,7 +61,7 @@ export const StepLogistics: React.FunctionComponent<StepProps> = ({
           </EuiTitle>
         </EuiFlexItem>
 
-        <EuiFlexItem grow={false}>
+        {/* <EuiFlexItem grow={false}>
           <EuiButtonEmpty
             size="s"
             flush="right"
@@ -74,7 +74,7 @@ export const StepLogistics: React.FunctionComponent<StepProps> = ({
               defaultMessage="Index Templates docs"
             />
           </EuiButtonEmpty>
-        </EuiFlexItem>
+        </EuiFlexItem> */}
       </EuiFlexGroup>
       <EuiSpacer size="l" />
       {/* Name */}
