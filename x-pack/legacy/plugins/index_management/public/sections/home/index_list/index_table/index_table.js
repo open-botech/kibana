@@ -484,6 +484,7 @@ export class IndexTable extends Component {
               </EuiFlexItem>
               <EuiFlexItem grow={false}>
                 <EuiButton
+                  style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)', color: '#fff' }}
                   isLoading={indicesLoading}
                   color="secondary"
                   onClick={() => {
