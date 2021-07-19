@@ -77,10 +77,10 @@ export const RepositoryFormStepOne: React.FunctionComponent<Props> = ({
 
   const pluginDocLink = (
     <EuiLink href={documentationLinksService.getRepositoryPluginDocUrl()} target="_blank">
-      <FormattedMessage
+      {/* <FormattedMessage
         id="xpack.snapshotRestore.repositoryForm.fields.typePluginsDocLinkText"
         defaultMessage="Learn more about plugins."
-      />
+      /> */}
     </EuiLink>
   );
 
@@ -144,19 +144,19 @@ export const RepositoryFormStepOne: React.FunctionComponent<Props> = ({
           title={displayName}
           icon={<RepositoryTypeLogo type={type} size="l" />}
           description={<Fragment />} /* EuiCard requires `description` */
-          footer={
-            <EuiButtonEmpty
-              href={documentationLinksService.getRepositoryTypeDocUrl(type)}
-              target="_blank"
-              size="xs"
-              iconType="iInCircle"
-            >
-              <FormattedMessage
-                id="xpack.snapshotRestore.repositoryForm.fields.typeDocsLinkText"
-                defaultMessage="Learn more"
-              />
-            </EuiButtonEmpty>
-          }
+          // footer={
+          //   <EuiButtonEmpty
+          //     href={documentationLinksService.getRepositoryTypeDocUrl(type)}
+          //     target="_blank"
+          //     size="xs"
+          //     iconType="iInCircle"
+          //   >
+          //     <FormattedMessage
+          //       id="xpack.snapshotRestore.repositoryForm.fields.typeDocsLinkText"
+          //       defaultMessage="Learn more"
+          //     />
+          //   </EuiButtonEmpty>
+          // }
           selectable={{
             onClick: () => onTypeChange(type),
             isSelected: isSelectedType,
@@ -293,10 +293,10 @@ export const RepositoryFormStepOne: React.FunctionComponent<Props> = ({
                   href={documentationLinksService.getRepositoryTypeDocUrl(REPOSITORY_TYPES.source)}
                   target="_blank"
                 >
-                  <FormattedMessage
+                  {/* <FormattedMessage
                     id="xpack.snapshotRestore.repositoryForm.fields.sourceOnlyDocLinkText"
                     defaultMessage="Learn more about source-only repositories."
-                  />
+                  /> */}
                 </EuiLink>
               ),
             }}
@@ -348,6 +348,7 @@ export const RepositoryFormStepOne: React.FunctionComponent<Props> = ({
       iconType="arrowRight"
       iconSide="right"
       data-test-subj="nextButton"
+      style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
     >
       <FormattedMessage
         id="xpack.snapshotRestore.repositoryForm.nextButtonLabel"

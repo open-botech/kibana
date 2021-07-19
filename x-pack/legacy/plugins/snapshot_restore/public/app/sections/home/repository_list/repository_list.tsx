@@ -119,6 +119,7 @@ export const RepositoryList: React.FunctionComponent<RouteComponentProps<MatchPa
             fill
             iconType="plusInCircle"
             data-test-subj="registerRepositoryButton"
+            style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
           >
             <FormattedMessage
               id="xpack.snapshotRestore.addRepositoryButtonLabel"

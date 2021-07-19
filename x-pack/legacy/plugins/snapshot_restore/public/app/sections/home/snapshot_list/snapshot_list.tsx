@@ -182,6 +182,7 @@ export const SnapshotList: React.FunctionComponent<RouteComponentProps<MatchPara
             </p>
             <p>
               <EuiButton
+                style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
                 href={linkToAddRepository()}
                 fill
                 iconType="plusInCircle"

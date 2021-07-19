@@ -428,7 +428,7 @@ export const PolicyStepSettings: React.FunctionComponent<StepProps> = ({
           </EuiTitle>
         </EuiFlexItem>
 
-        <EuiFlexItem grow={false}>
+        {/* <EuiFlexItem grow={false}>
           <EuiButtonEmpty
             size="s"
             flush="right"
@@ -441,7 +441,7 @@ export const PolicyStepSettings: React.FunctionComponent<StepProps> = ({
               defaultMessage="Snapshot settings docs"
             />
           </EuiButtonEmpty>
-        </EuiFlexItem>
+        </EuiFlexItem> */}
       </EuiFlexGroup>
       <EuiSpacer size="l" />
 

@@ -117,7 +117,7 @@ export const SnapshotRestoreHome: React.FunctionComponent<RouteComponentProps<Ma
                 />
               </h1>
             </EuiFlexItem>
-            <EuiFlexItem grow={false}>
+            {/* <EuiFlexItem grow={false}>
               <EuiButtonEmpty
                 href={documentationLinksService.getRepositoryTypeDocUrl()}
                 target="_blank"
@@ -129,7 +129,7 @@ export const SnapshotRestoreHome: React.FunctionComponent<RouteComponentProps<Ma
                   defaultMessage="Snapshot and Restore docs"
                 />
               </EuiButtonEmpty>
-            </EuiFlexItem>
+            </EuiFlexItem> */}
           </EuiFlexGroup>
         </EuiTitle>
         <EuiSpacer size="s" />
