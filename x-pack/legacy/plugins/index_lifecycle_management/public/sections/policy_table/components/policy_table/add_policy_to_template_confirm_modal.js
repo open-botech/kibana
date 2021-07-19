@@ -20,10 +20,8 @@ import {
   EuiText,
 } from '@elastic/eui';
 import { toastNotifications } from 'ui/notify';
-
 import { addLifecyclePolicyToTemplate, loadIndexTemplates } from '../../../../services/api';
 import { showApiError } from '../../../../services/api_errors';
-import { LearnMoreLink } from '../../../components/learn_more_link';
 
 export class AddPolicyToTemplateConfirmModal extends Component {
   state = {
@@ -199,7 +197,7 @@ export class AddPolicyToTemplateConfirmModal extends Component {
           confirmButtonText={i18n.translate(
             'xpack.indexLifecycleMgmt.policyTable.addLifecyclePolicyToTemplateConfirmModal.confirmButton',
             {
-              defaultMessage: 'Add policy'
+              defaultMessage: 'Add policy',
             }
           )}
           onClose={onCancel}
@@ -210,7 +208,8 @@ export class AddPolicyToTemplateConfirmModal extends Component {
                 id="xpack.indexLifecycleMgmt.policyTable.addLifecyclePolicyToTemplateConfirmModal.explanationText"
                 defaultMessage="This will apply the lifecycle policy to
                   all indices which match the index template."
-              />{' '}<LearnMoreLink
+              />{' '}
+              {/* <LearnMoreLink
                 docPath="indices-templates.html"
                 text={
                   <FormattedMessage
@@ -218,7 +217,7 @@ export class AddPolicyToTemplateConfirmModal extends Component {
                     defaultMessage="Learn about index templates"
                   />
                 }
-              />
+              /> */}
             </p>
           </EuiText>
           <EuiSpacer size="m" />

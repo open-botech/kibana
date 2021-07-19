@@ -29,7 +29,7 @@ import {
   PHASE_ROLLOVER_MAX_SIZE_STORED_UNITS,
   PHASE_ROLLOVER_ENABLED,
 } from '../../../../constants';
-import { LearnMoreLink, ActiveBadge, PhaseErrorMessage } from '../../../components';
+import { ActiveBadge, PhaseErrorMessage } from '../../../components';
 import { ErrableFormRow } from '../../form_errors';
 import { SetPriorityInput } from '../set_priority_input';
 
@@ -90,7 +90,7 @@ export class HotPhase extends PureComponent {
                     to the index alias and designated as the write index."
                   />
                 </p>
-                <LearnMoreLink
+                {/* <LearnMoreLink
                   text={
                     <FormattedMessage
                       id="xpack.indexLifecycleMgmt.editPolicy.hotPhase.learnAboutRolloverLinkText"
@@ -98,7 +98,7 @@ export class HotPhase extends PureComponent {
                     />
                   }
                   docPath="indices-rollover-index.html"
-                />
+                /> */}
                 <EuiSpacer size="m"/>
               </Fragment>
             }
