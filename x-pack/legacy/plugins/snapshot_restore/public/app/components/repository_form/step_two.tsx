@@ -77,7 +77,7 @@ export const RepositoryFormStepTwo: React.FunctionComponent<Props> = ({
             </h2>
           </EuiTitle>
         </EuiFlexItem>
-        <EuiFlexItem grow={false}>
+        {/* <EuiFlexItem grow={false}>
           <EuiButtonEmpty
             size="s"
             flush="right"
@@ -93,7 +93,7 @@ export const RepositoryFormStepTwo: React.FunctionComponent<Props> = ({
               }}
             />
           </EuiButtonEmpty>
-        </EuiFlexItem>
+        </EuiFlexItem> */}
       </EuiFlexGroup>
       <EuiSpacer size="l" />
 
@@ -152,6 +152,7 @@ export const RepositoryFormStepTwo: React.FunctionComponent<Props> = ({
             fill={isManagedRepository ? false : true}
             data-test-subj="submitButton"
             isLoading={isSaving}
+            style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
           >
             {isSaving ? savingLabel : saveLabel}
           </EuiButton>

@@ -306,10 +306,10 @@ export const PolicyStepLogistics: React.FunctionComponent<StepProps> = ({
                   href={documentationLinksService.getDateMathIndexNamesUrl()}
                   target="_blank"
                 >
-                  <FormattedMessage
+                  {/* <FormattedMessage
                     id="xpack.snapshotRestore.policyForm.stepLogistics.policySnapshotNameHelpTextDocLink"
                     defaultMessage="Learn more"
-                  />
+                  /> */}
                 </EuiLink>
               ),
             }}
@@ -380,10 +380,10 @@ export const PolicyStepLogistics: React.FunctionComponent<StepProps> = ({
                 values={{
                   docLink: (
                     <EuiLink href={documentationLinksService.getCronUrl()} target="_blank">
-                      <FormattedMessage
+                      {/* <FormattedMessage
                         id="xpack.snapshotRestore.policyForm.stepLogistics.policyScheduleHelpTextDocLink"
                         defaultMessage="Learn more"
-                      />
+                      /> */}
                     </EuiLink>
                   ),
                 }}
@@ -481,7 +481,7 @@ export const PolicyStepLogistics: React.FunctionComponent<StepProps> = ({
           </EuiTitle>
         </EuiFlexItem>
 
-        <EuiFlexItem grow={false}>
+        {/* <EuiFlexItem grow={false}>
           <EuiButtonEmpty
             size="s"
             flush="right"
@@ -494,7 +494,7 @@ export const PolicyStepLogistics: React.FunctionComponent<StepProps> = ({
               defaultMessage="Logistics docs"
             />
           </EuiButtonEmpty>
-        </EuiFlexItem>
+        </EuiFlexItem> */}
       </EuiFlexGroup>
       <EuiSpacer size="l" />
 
