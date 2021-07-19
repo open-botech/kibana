@@ -38,7 +38,6 @@ import {
 
 import { goToPolicyList } from '../../services/navigation';
 import { findFirstError } from '../../services/find_errors';
-import { LearnMoreLink } from '../components';
 import { NodeAttrsDetails } from './components/node_attrs_details';
 import { PolicyJsonFlyout } from './components/policy_json_flyout';
 import { ErrableFormRow } from './form_errors';
@@ -180,7 +179,7 @@ export class EditPolicy extends Component {
                       from actively writing to the index to deleting it."
                   />
                   {' '}
-                  <LearnMoreLink
+                  {/* <LearnMoreLink
                     docPath="index-lifecycle-management.html"
                     text={
                       <FormattedMessage
@@ -188,7 +187,7 @@ export class EditPolicy extends Component {
                         defaultMessage="Learn about the index lifecycle."
                       />
                     }
-                  />
+                  /> */}
                 </p>
               </EuiText>
 
@@ -325,6 +324,7 @@ export class EditPolicy extends Component {
                         iconSide="left"
                         onClick={this.submit}
                         color="secondary"
+                        style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
                       >
                         {saveAsNewPolicy ? (
                           <FormattedMessage

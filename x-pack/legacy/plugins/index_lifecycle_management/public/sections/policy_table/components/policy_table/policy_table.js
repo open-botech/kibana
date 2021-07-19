@@ -198,6 +198,7 @@ export class PolicyTable extends Component {
   renderCreatePolicyButton() {
     return (
       <EuiButton
+        style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
         href={`#${BASE_PATH}policies/edit`}
         fill
         iconType="plusInCircle"
