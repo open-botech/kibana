@@ -199,7 +199,7 @@ export const RepositoryDetails: React.FunctionComponent<Props> = ({
                 : textService.getRepositoryTypeName(type)}
             </span>
           </EuiFlexItem>
-          <EuiFlexItem grow={false}>
+          {/* <EuiFlexItem grow={false}>
             <EuiButtonEmpty
               size="s"
               flush="right"
@@ -207,13 +207,13 @@ export const RepositoryDetails: React.FunctionComponent<Props> = ({
               target="_blank"
               iconType="help"
               data-test-subj="documentationLink"
-            >
+            > 
               <FormattedMessage
                 id="xpack.snapshotRestore.repositoryDetails.repositoryTypeDocLink"
                 defaultMessage="Repository docs"
               />
             </EuiButtonEmpty>
-          </EuiFlexItem>
+          </EuiFlexItem> */}
         </EuiFlexGroup>
         <EuiSpacer size="l" />
         <EuiTitle size="s">
