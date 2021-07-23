@@ -88,7 +88,7 @@ export const WatchList = () => {
         >
           <FormattedMessage
             id="xpack.watcher.sections.watchList.createWatchButtonLabel"
-            defaultMessage="Create"
+            defaultMessage="创建告警"
           />
         </EuiButton>
       }
@@ -249,7 +249,7 @@ export const WatchList = () => {
       {
         field: 'name',
         name: i18n.translate('xpack.watcher.sections.watchList.watchTable.nameHeader', {
-          defaultMessage: 'Name',
+          defaultMessage: '告警名称',
         }),
         render: (name: string, item: any) => {
           return <span data-test-subj={`watchNameColumn-${item.id}`}>{name}</span>;
@@ -260,7 +260,7 @@ export const WatchList = () => {
       {
         field: 'watchStatus.state',
         name: i18n.translate('xpack.watcher.sections.watchList.watchTable.stateHeader', {
-          defaultMessage: 'State',
+          defaultMessage: '告警状态',
         }),
         sortable: true,
         width: '130px',
@@ -269,7 +269,7 @@ export const WatchList = () => {
       {
         field: 'watchStatus.lastMetCondition',
         name: i18n.translate('xpack.watcher.sections.watchList.watchTable.lastFiredHeader', {
-          defaultMessage: 'Last fired',
+          defaultMessage: '上次发送时间',
         }),
         sortable: true,
         truncateText: true,
@@ -281,7 +281,7 @@ export const WatchList = () => {
       {
         field: 'watchStatus.lastChecked',
         name: i18n.translate('xpack.watcher.sections.watchList.watchTable.lastTriggeredHeader', {
-          defaultMessage: 'Last triggered',
+          defaultMessage: '上次触发时间',
         }),
         sortable: true,
         truncateText: true,
@@ -293,14 +293,14 @@ export const WatchList = () => {
       {
         field: 'watchStatus.comment',
         name: i18n.translate('xpack.watcher.sections.watchList.watchTable.commentHeader', {
-          defaultMessage: 'Comment',
+          defaultMessage: '注释',
         }),
         sortable: true,
         truncateText: true,
       },
       {
         name: i18n.translate('xpack.watcher.sections.watchList.watchTable.actionHeader', {
-          defaultMessage: 'Actions',
+          defaultMessage: '操作',
         }),
         width: '75px',
         actions: [
@@ -451,7 +451,7 @@ export const WatchList = () => {
                 />
               </h1>
             </EuiFlexItem>
-            <EuiFlexItem grow={false}>
+            {/* <EuiFlexItem grow={false}>
               <EuiButtonEmpty
                 href={watcherGettingStartedUrl}
                 target="_blank"
@@ -463,7 +463,7 @@ export const WatchList = () => {
                   defaultMessage="Watcher docs"
                 />
               </EuiButtonEmpty>
-            </EuiFlexItem>
+            </EuiFlexItem> */}
           </EuiFlexGroup>
         </EuiTitle>
 
