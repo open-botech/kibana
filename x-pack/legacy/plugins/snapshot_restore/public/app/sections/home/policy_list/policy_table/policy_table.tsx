@@ -282,6 +282,10 @@ export const PolicyTable: React.FunctionComponent<Props> = ({
             iconType="refresh"
             onClick={reload}
             data-test-subj="reloadButton"
+            style={{
+              background: 'linear-gradient(to right, #5b45ff, #1273ff)',
+              color: '#fff',
+            }}
           >
             <FormattedMessage
               id="xpack.snapshotRestore.policyList.table.reloadPoliciesButton"
@@ -295,6 +299,7 @@ export const PolicyTable: React.FunctionComponent<Props> = ({
             fill
             iconType="plusInCircle"
             data-test-subj="createPolicyButton"
+            style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
           >
             <FormattedMessage
               id="xpack.snapshotRestore.policyList.table.addPolicyButton"

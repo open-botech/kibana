@@ -14,6 +14,7 @@ import {
   EuiFieldText,
   EuiFlexGrid,
   EuiFlexItem,
+  EuiFlexGroup,
   EuiFormRow,
   EuiLink,
   EuiSpacer,
@@ -341,20 +342,44 @@ export const RepositoryFormStepOne: React.FunctionComponent<Props> = ({
   );
 
   const renderActions = () => (
-    <EuiButton
-      color="primary"
-      onClick={onNext}
-      fill
-      iconType="arrowRight"
-      iconSide="right"
-      data-test-subj="nextButton"
-      style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
-    >
-      <FormattedMessage
-        id="xpack.snapshotRestore.repositoryForm.nextButtonLabel"
-        defaultMessage="Next"
-      />
-    </EuiButton>
+    <EuiFlexItem grow={false}>
+      <EuiFlexGroup justifyContent="flexStart">
+        <EuiFlexItem grow={false}>
+          <EuiButton
+            color="primary"
+            onClick={() => {
+              window.history.back();
+            }}
+            fill
+            iconType="arrowLeft"
+            iconSide="left"
+            data-test-subj="nextButton"
+            style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+          >
+            <FormattedMessage
+              id="xpack.snapshotRestore.repositoryForm.nextButtonLabel_diy"
+              defaultMessage="返回"
+            />
+          </EuiButton>
+        </EuiFlexItem>
+        <EuiFlexItem grow={false}>
+          <EuiButton
+            color="primary"
+            onClick={onNext}
+            fill
+            iconType="arrowRight"
+            iconSide="right"
+            data-test-subj="nextButton"
+            style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+          >
+            <FormattedMessage
+              id="xpack.snapshotRestore.repositoryForm.nextButtonLabel"
+              defaultMessage="Next"
+            />
+          </EuiButton>
+        </EuiFlexItem>
+      </EuiFlexGroup>
+    </EuiFlexItem>
   );
 
   const renderFormValidationError = () => {

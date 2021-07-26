@@ -70,7 +70,7 @@ export const RestoreList: React.FunctionComponent = () => {
         <SectionLoading>
           <FormattedMessage
             id="xpack.snapshotRestore.restoreList.loadingRestoresDescription"
-            defaultMessage="Loading restores…"
+            defaultMessage="正在加载存储库…"
           />
         </SectionLoading>
       );
@@ -82,7 +82,7 @@ export const RestoreList: React.FunctionComponent = () => {
           title={
             <FormattedMessage
               id="xpack.snapshotRestore.restoreList.loadingRestoresErrorMessage"
-              defaultMessage="Error loading restores"
+              defaultMessage="加载存储库出错"
             />
           }
           error={error}
@@ -98,7 +98,7 @@ export const RestoreList: React.FunctionComponent = () => {
             <h1>
               <FormattedMessage
                 id="xpack.snapshotRestore.restoreList.emptyPromptTitle"
-                defaultMessage="You don't have any restored snapshots"
+                defaultMessage="您没有任何已恢复的快照"
               />
             </h1>
           }
@@ -107,13 +107,13 @@ export const RestoreList: React.FunctionComponent = () => {
               <p>
                 <FormattedMessage
                   id="xpack.snapshotRestore.restoreList.emptyPromptDescription"
-                  defaultMessage="Go to {snapshotsLink} to start a restore."
+                  defaultMessage="前往 {snapshotsLink} 开始恢复."
                   values={{
                     snapshotsLink: (
                       <EuiLink href={linkToSnapshots()}>
                         <FormattedMessage
                           id="xpack.snapshotRestore.restoreList.emptyPromptDescriptionLink"
-                          defaultMessage="Snapshots"
+                          defaultMessage="快照"
                         />
                       </EuiLink>
                     ),

@@ -213,7 +213,10 @@ export const TemplateTable: React.FunctionComponent<Props> = ({
     ),
     toolsRight: [
       <EuiButton
-        style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)', color: '#fff' }}
+        style={{
+          background: 'linear-gradient(to right, #5b45ff, #1273ff)',
+          color: '#fff',
+        }}
         color="secondary"
         iconType="refresh"
         onClick={reload}

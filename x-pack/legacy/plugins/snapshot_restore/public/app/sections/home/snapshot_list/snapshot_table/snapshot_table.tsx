@@ -317,6 +317,10 @@ export const SnapshotTable: React.FunctionComponent<Props> = ({
         iconType="refresh"
         onClick={reload}
         data-test-subj="reloadButton"
+        style={{
+          background: 'linear-gradient(to right, #5b45ff, #1273ff)',
+          color: '#fff',
+        }}
       >
         <FormattedMessage
           id="xpack.snapshotRestore.snapshotList.table.reloadSnapshotsButton"
