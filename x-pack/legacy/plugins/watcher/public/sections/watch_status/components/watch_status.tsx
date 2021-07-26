@@ -15,6 +15,7 @@ import {
   EuiTitle,
   EuiToolTip,
   EuiBadge,
+  EuiButton,
   EuiButtonEmpty,
 } from '@elastic/eui';
 import chrome from 'ui/chrome';
@@ -182,21 +183,37 @@ export const WatchStatus = ({
             </EuiFlexItem>
             {isSystemWatch ? (
               <EuiFlexItem grow={false}>
-                <EuiToolTip
-                  content={
-                    <FormattedMessage
-                      id="xpack.watcher.sections.watchDetail.headerBadgeToolipText"
-                      defaultMessage="您无法停用或删除系统监控."
-                    />
-                  }
-                >
-                  <EuiBadge color="hollow">
-                    <FormattedMessage
-                      id="xpack.watcher.sections.watchDetail.headerBadgeText"
-                      defaultMessage="系统监控"
-                    />
-                  </EuiBadge>
-                </EuiToolTip>
+                <EuiFlexGroup justifyContent="flexEnd">
+                  <EuiFlexItem grow={false}>
+                    <EuiToolTip
+                      content={
+                        <FormattedMessage
+                          id="xpack.watcher.sections.watchDetail.headerBadgeToolipText"
+                          defaultMessage="您无法停用或删除系统监控."
+                        />
+                      }
+                    >
+                      <EuiBadge color="hollow">
+                        <FormattedMessage
+                          id="xpack.watcher.sections.watchDetail.headerBadgeText"
+                          defaultMessage="系统监控"
+                        />
+                      </EuiBadge>
+                    </EuiToolTip>
+                  </EuiFlexItem>
+                  <EuiFlexItem>
+                    <EuiButton
+                      onClick={() => {
+                        window.history.back();
+                      }}
+                    >
+                      <FormattedMessage
+                        id="core.ui.chrome.headerGlobalNav.helpMenuGoToDocumentation_diy"
+                        defaultMessage="返回"
+                      />
+                    </EuiButton>
+                  </EuiFlexItem>
+                </EuiFlexGroup>
               </EuiFlexItem>
             ) : (
               <EuiFlexItem>
@@ -224,6 +241,18 @@ export const WatchStatus = ({
                         defaultMessage="删除监控"
                       />
                     </EuiButtonEmpty>
+                  </EuiFlexItem>
+                  <EuiFlexItem grow={false}>
+                    <EuiButton
+                      onClick={() => {
+                        window.history.back();
+                      }}
+                    >
+                      <FormattedMessage
+                        id="core.ui.chrome.headerGlobalNav.helpMenuGoToDocumentation_diy"
+                        defaultMessage="返回"
+                      />
+                    </EuiButton>
                   </EuiFlexItem>
                 </EuiFlexGroup>
               </EuiFlexItem>

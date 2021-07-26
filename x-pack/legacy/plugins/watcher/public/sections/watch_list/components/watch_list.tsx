@@ -221,7 +221,7 @@ export const WatchList = () => {
         title={
           <FormattedMessage
             id="xpack.watcher.sections.watchList.errorTitle"
-            defaultMessage="Error loading watches"
+            defaultMessage="加载监控时出错"
           />
         }
         error={error}

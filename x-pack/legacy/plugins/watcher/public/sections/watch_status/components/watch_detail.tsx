@@ -66,7 +66,7 @@ export const WatchDetail = () => {
     {
       field: 'id',
       name: i18n.translate('xpack.watcher.sections.watchDetail.watchTable.actionHeader', {
-        defaultMessage: 'Name',
+        defaultMessage: '名称',
       }),
       sortable: true,
       truncateText: true,
@@ -74,7 +74,7 @@ export const WatchDetail = () => {
     {
       field: 'state',
       name: i18n.translate('xpack.watcher.sections.watchDetail.watchTable.stateHeader', {
-        defaultMessage: 'State',
+        defaultMessage: '状态',
       }),
       sortable: true,
       truncateText: true,
@@ -225,7 +225,7 @@ export const WatchDetail = () => {
         message={
           <FormattedMessage
             id="xpack.watcher.sections.watchDetail.watchTable.noWatchesMessage"
-            defaultMessage="No actions to show"
+            defaultMessage="没有要显示的操作"
           />
         }
       />
