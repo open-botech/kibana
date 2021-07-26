@@ -101,14 +101,14 @@ export const JsonWatchEditSimulate = ({
     {
       field: 'type',
       name: i18n.translate('xpack.watcher.sections.watchEdit.simulate.table.typeColumnLabel', {
-        defaultMessage: 'Type',
+        defaultMessage: '类型',
       }),
       truncateText: true,
     },
     {
       field: 'actionMode',
       name: i18n.translate('xpack.watcher.sections.watchEdit.simulate.table.modeColumnLabel', {
-        defaultMessage: 'Mode',
+        defaultMessage: '模式',
       }),
       render: ({}, row: { actionId: string }) => (
         <EuiSelect
@@ -148,8 +148,7 @@ export const JsonWatchEditSimulate = ({
       <EuiText>
         <p>
           {i18n.translate('xpack.watcher.sections.watchEdit.simulate.pageDescription', {
-            defaultMessage:
-              'Use the simulator to override the watch schedule, condition, actions, and input results.',
+            defaultMessage: '使用模拟器可覆盖监视计划、条件、操作和输入结果。',
           })}
         </p>
       </EuiText>
@@ -161,14 +160,14 @@ export const JsonWatchEditSimulate = ({
             <h3>
               {i18n.translate(
                 'xpack.watcher.sections.watchEdit.simulate.form.triggerOverridesTitle',
-                { defaultMessage: 'Trigger' }
+                { defaultMessage: '触发' }
               )}
             </h3>
           }
           description={i18n.translate(
             'xpack.watcher.sections.watchEdit.simulate.form.triggerOverridesDescription',
             {
-              defaultMessage: 'Set the time and date for starting the watch.',
+              defaultMessage: '设置启动监控的时间和日期',
             }
           )}
         >
@@ -176,7 +175,7 @@ export const JsonWatchEditSimulate = ({
             label={i18n.translate(
               'xpack.watcher.sections.watchEdit.simulate.form.scheduledTimeFieldLabel',
               {
-                defaultMessage: 'Schedule every',
+                defaultMessage: '间隔时间',
               }
             )}
           >
@@ -217,7 +216,7 @@ export const JsonWatchEditSimulate = ({
             label={i18n.translate(
               'xpack.watcher.sections.watchEdit.simulate.form.triggeredTimeFieldLabel',
               {
-                defaultMessage: 'Trigger after',
+                defaultMessage: '延迟触发',
               }
             )}
           >
@@ -250,7 +249,7 @@ export const JsonWatchEditSimulate = ({
             <h3>
               {i18n.translate(
                 'xpack.watcher.sections.watchEdit.simulate.form.conditionOverridesTitle',
-                { defaultMessage: 'Condition' }
+                { defaultMessage: '条件' }
               )}
             </h3>
           }
@@ -258,7 +257,7 @@ export const JsonWatchEditSimulate = ({
             'xpack.watcher.sections.watchEdit.simulate.form.conditionOverridesDescription',
             {
               defaultMessage:
-                'Execute the watch when the condition is met. Otherwise, ignore the condition and run the watch on a fixed schedule.',
+                '在满足该条件时，执行该监控。否则，请忽略该条件，并按固定的时间表运行监控。',
             }
           )}
         >
@@ -266,7 +265,7 @@ export const JsonWatchEditSimulate = ({
             label={i18n.translate(
               'xpack.watcher.sections.watchEdit.simulate.form.ignoreConditionFieldLabel',
               {
-                defaultMessage: 'Ignore condition',
+                defaultMessage: '忽略条件',
               }
             )}
             checked={ignoreCondition}
@@ -286,14 +285,14 @@ export const JsonWatchEditSimulate = ({
             <h3>
               {i18n.translate(
                 'xpack.watcher.sections.watchEdit.simulate.form.actionOverridesTitle',
-                { defaultMessage: 'Actions' }
+                { defaultMessage: '操作' }
               )}
             </h3>
           }
           description={
             <FormattedMessage
               id="xpack.watcher.sections.watchEdit.simulate.form.actionOverridesDescription"
-              defaultMessage="Allow the watch to execute or skip actions. {actionsLink}"
+              defaultMessage="允许监控程序执行或跳过操作. "
               values={{
                 actionsLink: (
                   <EuiLink href={executeWatchApiUrl} target="_blank">
@@ -310,11 +309,11 @@ export const JsonWatchEditSimulate = ({
           }
         >
           <EuiFormRow
-            describedByIds={['simulateExecutionActionModesDescription']}
+            间隔时间={['simulateExecutionActionModesDescription']}
             label={i18n.translate(
               'xpack.watcher.sections.watchEdit.simulate.form.actionModesFieldLabel',
               {
-                defaultMessage: 'Action modes',
+                defaultMessage: '操作模式',
               }
             )}
             fullWidth
@@ -334,15 +333,14 @@ export const JsonWatchEditSimulate = ({
             <h3>
               {i18n.translate(
                 'xpack.watcher.sections.watchEdit.simulate.form.inputOverridesTitle',
-                { defaultMessage: 'Input' }
+                { defaultMessage: '输入' }
               )}
             </h3>
           }
           description={i18n.translate(
             'xpack.watcher.sections.watchEdit.simulate.form.inputOverridesDescription',
             {
-              defaultMessage:
-                'Enter JSON data to override the watch payload that comes from running the input.',
+              defaultMessage: '输入JSON数据以覆盖运行输入时产生的监控有效负载.',
             }
           )}
         >
@@ -352,7 +350,7 @@ export const JsonWatchEditSimulate = ({
             label={i18n.translate(
               'xpack.watcher.sections.watchEdit.simulate.form.alternativeInputFieldLabel',
               {
-                defaultMessage: 'Alternative input',
+                defaultMessage: '替代输入',
               }
             )}
             errorKey="json"
@@ -389,6 +387,7 @@ export const JsonWatchEditSimulate = ({
           data-test-subj="simulateWatchButton"
           fill
           type="submit"
+          style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
           isLoading={isExecuting}
           isDisabled={hasExecuteWatchErrors || hasWatchJsonError}
           onClick={async () => {
@@ -407,7 +406,7 @@ export const JsonWatchEditSimulate = ({
           }}
         >
           {i18n.translate('xpack.watcher.sections.watchEdit.simulate.form.saveButtonLabel', {
-            defaultMessage: 'Simulate watch',
+            defaultMessage: '模拟监控',
           })}
         </EuiButton>
       </EuiForm>

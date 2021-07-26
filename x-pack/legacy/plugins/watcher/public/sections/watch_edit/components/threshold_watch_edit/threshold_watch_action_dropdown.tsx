@@ -74,7 +74,7 @@ export const WatchActionsDropdown: React.FunctionComponent<Props> = ({ settings,
     >
       <FormattedMessage
         id="xpack.watcher.sections.watchEdit.actions.addActionButtonLabel"
-        defaultMessage="Add action"
+        defaultMessage="添加功能"
       />
     </EuiButton>
   );

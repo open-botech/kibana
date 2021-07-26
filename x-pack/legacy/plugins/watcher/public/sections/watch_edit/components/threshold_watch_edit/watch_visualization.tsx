@@ -169,7 +169,7 @@ export const WatchVisualization = () => {
           <EuiText color="subdued">
             <FormattedMessage
               id="xpack.watcher.sections.watchEdit.loadingWatchVisualizationDescription"
-              defaultMessage="Loading watch visualization…"
+              defaultMessage="正在加载告警的可视化功能…"
             />
           </EuiText>
         }
@@ -268,7 +268,7 @@ export const WatchVisualization = () => {
             title={
               <FormattedMessage
                 id="xpack.watcher.thresholdPreviewChart.noDataTitle"
-                defaultMessage="No data"
+                defaultMessage="没有数据"
               />
             }
             color="warning"

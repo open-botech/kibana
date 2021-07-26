@@ -32,37 +32,37 @@ const watchHistoryTimeSpanOptions = [
   {
     value: 'now-1h',
     text: i18n.translate('xpack.watcher.sections.watchHistory.timeSpan.1h', {
-      defaultMessage: 'Last one hour',
+      defaultMessage: '最近一小时',
     }),
   },
   {
     value: 'now-24h',
     text: i18n.translate('xpack.watcher.sections.watchHistory.timeSpan.24h', {
-      defaultMessage: 'Last 24 hours',
+      defaultMessage: '最近一天',
     }),
   },
   {
     value: 'now-7d',
     text: i18n.translate('xpack.watcher.sections.watchHistory.timeSpan.7d', {
-      defaultMessage: 'Last 7 days',
+      defaultMessage: '最近一周',
     }),
   },
   {
     value: 'now-30d',
     text: i18n.translate('xpack.watcher.sections.watchHistory.timeSpan.30d', {
-      defaultMessage: 'Last 30 days',
+      defaultMessage: '最近一个月',
     }),
   },
   {
     value: 'now-6M',
     text: i18n.translate('xpack.watcher.sections.watchHistory.timeSpan.6M', {
-      defaultMessage: 'Last 6 months',
+      defaultMessage: '最近半年',
     }),
   },
   {
     value: 'now-1y',
     text: i18n.translate('xpack.watcher.sections.watchHistory.timeSpan.1y', {
-      defaultMessage: 'Last 1 year',
+      defaultMessage: '最近一年',
     }),
   },
 ];
@@ -116,7 +116,7 @@ export const WatchHistory = () => {
     {
       field: 'startTime',
       name: i18n.translate('xpack.watcher.sections.watchHistory.watchTable.startTimeHeader', {
-        defaultMessage: 'Trigger time',
+        defaultMessage: '触发时间',
       }),
       sortable: true,
       truncateText: true,
@@ -135,7 +135,7 @@ export const WatchHistory = () => {
     {
       field: 'watchStatus.state',
       name: i18n.translate('xpack.watcher.sections.watchHistory.watchTable.stateHeader', {
-        defaultMessage: 'State',
+        defaultMessage: '状态',
       }),
       sortable: true,
       truncateText: true,
@@ -144,7 +144,7 @@ export const WatchHistory = () => {
     {
       field: 'watchStatus.comment',
       name: i18n.translate('xpack.watcher.sections.watchHistory.watchTable.commentHeader', {
-        defaultMessage: 'Comment',
+        defaultMessage: '注释',
       }),
       sortable: true,
       truncateText: true,
@@ -301,7 +301,7 @@ export const WatchHistory = () => {
         message={
           <FormattedMessage
             id="xpack.watcher.sections.watchHistory.watchTable.noCurrentStatus"
-            defaultMessage="No execution history to show"
+            defaultMessage="没有要显示的执行历史记录"
           />
         }
       />

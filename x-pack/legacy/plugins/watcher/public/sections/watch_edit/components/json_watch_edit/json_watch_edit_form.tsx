@@ -83,7 +83,7 @@ export const JsonWatchEditForm = () => {
         <EuiFormRow
           id="watchName"
           label={i18n.translate('xpack.watcher.sections.watchEdit.json.form.watchNameLabel', {
-            defaultMessage: 'Name (optional)',
+            defaultMessage: '名称',
           })}
         >
           <EuiFieldText
@@ -133,15 +133,15 @@ export const JsonWatchEditForm = () => {
           label={
             <Fragment>
               {i18n.translate('xpack.watcher.sections.watchEdit.json.form.watchJsonLabel', {
-                defaultMessage: 'Watch JSON',
+                defaultMessage: 'JSON',
               })}{' '}
-              (
+              {/* (
               <EuiLink href={putWatchApiUrl} target="_blank">
                 {i18n.translate('xpack.watcher.sections.watchEdit.json.form.watchJsonDocLink', {
                   defaultMessage: 'API syntax',
                 })}
               </EuiLink>
-              )
+              ) */}
             </Fragment>
           }
           errorKey="json"
@@ -176,6 +176,7 @@ export const JsonWatchEditForm = () => {
               fill
               color="secondary"
               type="submit"
+              style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
               iconType="check"
               isLoading={isSaving}
               isDisabled={hasErrors}
@@ -198,12 +199,12 @@ export const JsonWatchEditForm = () => {
               {watch.isNew ? (
                 <FormattedMessage
                   id="xpack.watcher.sections.watchEdit.json.createButtonLabel"
-                  defaultMessage="Create watch"
+                  defaultMessage="创建监控"
                 />
               ) : (
                 <FormattedMessage
                   id="xpack.watcher.sections.watchEdit.json.saveButtonLabel"
-                  defaultMessage="Save watch"
+                  defaultMessage="保存监控"
                 />
               )}
             </EuiButton>
@@ -211,7 +212,7 @@ export const JsonWatchEditForm = () => {
           <EuiFlexItem grow={false}>
             <EuiButtonEmpty data-test-subj="btnCancelWatch" onClick={() => goToWatchList()}>
               {i18n.translate('xpack.watcher.sections.watchEdit.json.cancelButtonLabel', {
-                defaultMessage: 'Cancel',
+                defaultMessage: '取消',
               })}
             </EuiButtonEmpty>
           </EuiFlexItem>

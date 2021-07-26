@@ -432,7 +432,7 @@ export const ThresholdWatchEdit = ({ pageTitle }: { pageTitle: string }) => {
               <h3 data-test-subj="watchConditionTitle">
                 <FormattedMessage
                   id="xpack.watcher.sections.watchEdit.watchConditionSectionTitle"
-                  defaultMessage="Match the following condition"
+                  defaultMessage="查询到以下信息"
                 />
               </h3>
             </EuiTitle>
@@ -874,6 +874,10 @@ export const ThresholdWatchEdit = ({ pageTitle }: { pageTitle: string }) => {
               color="secondary"
               data-test-subj="saveWatchButton"
               type="submit"
+              style={{
+                background: 'linear-gradient(to right, #5b45ff, #1273ff)',
+                border: '1px solid transparent',
+              }}
               iconType="check"
               isDisabled={hasErrors || hasActionErrors}
               isLoading={isSaving}
@@ -889,12 +893,12 @@ export const ThresholdWatchEdit = ({ pageTitle }: { pageTitle: string }) => {
               {watch.isNew ? (
                 <FormattedMessage
                   id="xpack.watcher.sections.watchEdit.threshold.createButtonLabel"
-                  defaultMessage="Create alert"
+                  defaultMessage="创建告警"
                 />
               ) : (
                 <FormattedMessage
                   id="xpack.watcher.sections.watchEdit.threshold.saveButtonLabel"
-                  defaultMessage="Save alert"
+                  defaultMessage="保存告警信息"
                 />
               )}
             </EuiButton>
@@ -902,7 +906,7 @@ export const ThresholdWatchEdit = ({ pageTitle }: { pageTitle: string }) => {
           <EuiFlexItem grow={false}>
             <EuiButtonEmpty onClick={() => goToWatchList()}>
               {i18n.translate('xpack.watcher.sections.watchEdit.threshold.cancelButtonLabel', {
-                defaultMessage: 'Cancel',
+                defaultMessage: '取消',
               })}
             </EuiButtonEmpty>
           </EuiFlexItem>

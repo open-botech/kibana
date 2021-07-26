@@ -47,13 +47,13 @@ const WATCH_STATUS_TABS: WatchStatusTab[] = [
   {
     id: WATCH_EXECUTION_HISTORY_TAB,
     name: i18n.translate('xpack.watcher.sections.watchStatus.executionHistoryTabLabel', {
-      defaultMessage: 'Execution history',
+      defaultMessage: '执行历史记录',
     }),
   },
   {
     id: WATCH_ACTIONS_TAB,
     name: i18n.translate('xpack.watcher.sections.watchStatus.actionsTabLabel', {
-      defaultMessage: 'Action statuses',
+      defaultMessage: '操作状态',
     }),
   },
 ];
@@ -91,7 +91,7 @@ export const WatchStatus = ({
       <SectionLoading>
         <FormattedMessage
           id="xpack.watcher.sections.watchStatus.loadingWatchDetailsDescription"
-          defaultMessage="Loading watch details…"
+          defaultMessage="正在加载监控的详细信息…"
         />
       </SectionLoading>
     );
@@ -116,12 +116,12 @@ export const WatchStatus = ({
     const activationButtonText = isActivated ? (
       <FormattedMessage
         id="xpack.watcher.sections.watchHistory.watchTable.deactivateWatchLabel"
-        defaultMessage="Deactivate"
+        defaultMessage="关闭"
       />
     ) : (
       <FormattedMessage
         id="xpack.watcher.sections.watchHistory.watchTable.activateWatchLabel"
-        defaultMessage="Activate"
+        defaultMessage="激活"
       />
     );
 
@@ -172,7 +172,7 @@ export const WatchStatus = ({
                 <h1 data-test-subj="pageTitle">
                   <FormattedMessage
                     id="xpack.watcher.sections.watchDetail.header"
-                    defaultMessage="Current status for '{watch}'"
+                    defaultMessage="当前'{watch}'的状态"
                     values={{
                       watch: watchName ? watchName : watchId,
                     }}
@@ -186,14 +186,14 @@ export const WatchStatus = ({
                   content={
                     <FormattedMessage
                       id="xpack.watcher.sections.watchDetail.headerBadgeToolipText"
-                      defaultMessage="You cannot deactivate or delete a system watch."
+                      defaultMessage="您无法停用或删除系统监控."
                     />
                   }
                 >
                   <EuiBadge color="hollow">
                     <FormattedMessage
                       id="xpack.watcher.sections.watchDetail.headerBadgeText"
-                      defaultMessage="System watch"
+                      defaultMessage="系统监控"
                     />
                   </EuiBadge>
                 </EuiToolTip>
@@ -221,7 +221,7 @@ export const WatchStatus = ({
                     >
                       <FormattedMessage
                         id="xpack.watcher.sections.watchHistory.deleteWatchButtonLabel"
-                        defaultMessage="Delete"
+                        defaultMessage="删除监控"
                       />
                     </EuiButtonEmpty>
                   </EuiFlexItem>

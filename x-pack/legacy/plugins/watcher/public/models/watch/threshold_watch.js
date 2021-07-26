@@ -111,7 +111,7 @@ export class ThresholdWatch extends BaseWatch {
     if (!this.name) {
       errors.name.push(
         i18n.translate('xpack.watcher.sections.watchEdit.threshold.error.requiredNameText', {
-          defaultMessage: 'Name is required.',
+          defaultMessage: '请输入名称',
         })
       );
     }
@@ -120,7 +120,7 @@ export class ThresholdWatch extends BaseWatch {
         i18n.translate(
           'xpack.watcher.sections.watchEdit.threshold.enterOneOrMoreIndicesValidationMessage',
           {
-            defaultMessage: 'Enter one or more indices.',
+            defaultMessage: '至少输入一条感知数据.',
           }
         )
       );
@@ -134,7 +134,7 @@ export class ThresholdWatch extends BaseWatch {
         i18n.translate(
           'xpack.watcher.sections.watchEdit.threshold.invalidIndexValidationMessage',
           {
-            defaultMessage: 'Index does not have a time field.',
+            defaultMessage: '该感知数据没有时间字段',
           }
         )
       );
@@ -144,7 +144,7 @@ export class ThresholdWatch extends BaseWatch {
         i18n.translate(
           'xpack.watcher.sections.watchEdit.threshold.timeFieldIsRequiredValidationText',
           {
-            defaultMessage: 'A time field is required.',
+            defaultMessage: '请选择时间字段',
           }
         )
       );
@@ -154,7 +154,7 @@ export class ThresholdWatch extends BaseWatch {
         i18n.translate(
           'xpack.watcher.sections.watchEdit.threshold.intervalSizeIsRequiredValidationMessage',
           {
-            defaultMessage: 'Interval size is required.',
+            defaultMessage: '请输入频率',
           }
         )
       );
@@ -267,7 +267,7 @@ export class ThresholdWatch extends BaseWatch {
   }
 
   static typeName = i18n.translate('xpack.watcher.models.thresholdWatch.typeName', {
-    defaultMessage: 'Threshold Alert',
+    defaultMessage: '创建阈值告警',
   });
   static iconClass = '';
   static selectMessage = i18n.translate('xpack.watcher.models.thresholdWatch.selectMessageText', {
