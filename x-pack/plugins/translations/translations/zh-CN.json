@@ -11128,6 +11128,7 @@
     "xpack.snapshotRestore.home.snapshotRestoreDocsLinkText": "快照文档",
     "xpack.snapshotRestore.home.snapshotRestoreTitle": "快照存储库",
     "xpack.snapshotRestore.home.snapshotsTabTitle": "快照",
+    "xpack.snapshotRestore.home.restoreTabTitle":"恢复状态",
     "xpack.snapshotRestore.repositoryDetails.closeButtonLabel": "关闭",
     "xpack.snapshotRestore.repositoryDetails.editButtonLabel": "编辑",
     "xpack.snapshotRestore.repositoryDetails.genericSettingsDescription": "存储库“{name}”的只读设置",
