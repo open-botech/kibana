@@ -83,6 +83,7 @@ export const WatchList = () => {
           fill
           data-test-subj="createWatchButton"
           iconType="arrowDown"
+          style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
           iconSide="right"
           onClick={() => setIsPopOverOpen(!isPopoverOpen)}
         >
@@ -137,7 +138,7 @@ export const WatchList = () => {
                     <span>
                       <FormattedMessage
                         id="xpack.watcher.sections.watchList.createAdvancedWatchButtonLabel"
-                        defaultMessage="Create advanced watch"
+                        defaultMessage="创建高级告警"
                       />
                     </span>
                   </EuiText>
@@ -163,7 +164,7 @@ export const WatchList = () => {
       <SectionLoading>
         <FormattedMessage
           id="xpack.watcher.sections.watchList.loadingWatchesDescription"
-          defaultMessage="Loading watches…"
+          defaultMessage="正在加载…"
         />
       </SectionLoading>
     );
@@ -393,7 +394,7 @@ export const WatchList = () => {
           ) : (
             <FormattedMessage
               id="xpack.watcher.sections.watchList.deleteSingleWatchButtonLabel"
-              defaultMessage="Delete watch"
+              defaultMessage="删除监控"
             />
           )}
         </EuiButton>

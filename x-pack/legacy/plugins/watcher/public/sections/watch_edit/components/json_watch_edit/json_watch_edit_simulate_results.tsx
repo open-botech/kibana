@@ -79,7 +79,7 @@ export const JsonWatchEditSimulateResults = ({
       name: i18n.translate(
         'xpack.watcher.sections.watchEdit.simulateResults.table.typeColumnLabel',
         {
-          defaultMessage: 'Type',
+          defaultMessage: '类型',
         }
       ),
       truncateText: true,
@@ -89,7 +89,7 @@ export const JsonWatchEditSimulateResults = ({
       name: i18n.translate(
         'xpack.watcher.sections.watchEdit.simulateResults.table.modeColumnLabel',
         {
-          defaultMessage: 'Mode',
+          defaultMessage: '模式',
         }
       ),
     },
@@ -98,7 +98,7 @@ export const JsonWatchEditSimulateResults = ({
       name: i18n.translate(
         'xpack.watcher.sections.watchEdit.simulateResults.table.stateColumnLabel',
         {
-          defaultMessage: 'State',
+          defaultMessage: '状态',
         }
       ),
       dataType: 'string',
@@ -109,7 +109,7 @@ export const JsonWatchEditSimulateResults = ({
       name: i18n.translate(
         'xpack.watcher.sections.watchEdit.simulateResults.table.reasonColumnLabel',
         {
-          defaultMessage: 'Reason',
+          defaultMessage: '原因',
         }
       ),
     },
@@ -119,7 +119,7 @@ export const JsonWatchEditSimulateResults = ({
     <EuiTitle size="s">
       <h2 id="simulateResultsFlyOutTitle" data-test-subj="simulateResultsFlyoutTitle">
         {i18n.translate('xpack.watcher.sections.watchEdit.simulateResults.title', {
-          defaultMessage: 'Simulation results',
+          defaultMessage: '模拟监控',
         })}
       </h2>
     </EuiTitle>
@@ -179,7 +179,7 @@ export const JsonWatchEditSimulateResults = ({
                 {i18n.translate(
                   'xpack.watcher.sections.watchEdit.simulateResults.actionsSectionTitle',
                   {
-                    defaultMessage: 'Actions',
+                    defaultMessage: '操作',
                   }
                 )}
               </h5>
@@ -194,7 +194,7 @@ export const JsonWatchEditSimulateResults = ({
             {i18n.translate(
               'xpack.watcher.sections.watchEdit.simulateResults.simulationOutputSectionTitle',
               {
-                defaultMessage: 'Simulation output',
+                defaultMessage: '模拟输出',
               }
             )}
           </h5>
