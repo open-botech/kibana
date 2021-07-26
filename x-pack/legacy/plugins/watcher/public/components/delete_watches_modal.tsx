@@ -23,22 +23,23 @@ export const DeleteWatchesModal = ({
   const confirmModalText = i18n.translate(
     'xpack.watcher.deleteSelectedWatchesConfirmModal.descriptionText',
     {
-      defaultMessage:
-        "You can't recover {numWatchesToDelete, plural, one {a deleted watch} other {deleted watches}}.",
-      values: { numWatchesToDelete },
+      defaultMessage: '删除监控后无法恢复',
+      // "You can't recover {numWatchesToDelete, plural, one {a deleted watch} other {deleted watches}}.",
+      // values: { numWatchesToDelete },
     }
   );
   const confirmButtonText = i18n.translate(
     'xpack.watcher.deleteSelectedWatchesConfirmModal.deleteButtonLabel',
     {
-      defaultMessage: 'Delete {numWatchesToDelete, plural, one {watch} other {# watches}} ',
-      values: { numWatchesToDelete },
+      defaultMessage: '删除监控 ',
+      // defaultMessage: 'Delete {numWatchesToDelete, plural, one {watch} other {# watches}} ',
+      // values: { numWatchesToDelete },
     }
   );
   const cancelButtonText = i18n.translate(
     'xpack.watcher.deleteSelectedWatchesConfirmModal.cancelButtonLabel',
     {
-      defaultMessage: 'Cancel',
+      defaultMessage: '取消',
     }
   );
   return (
@@ -59,7 +60,7 @@ export const DeleteWatchesModal = ({
                 'xpack.watcher.sections.watchList.deleteSelectedWatchesSuccessNotification.descriptionText',
                 {
                   defaultMessage:
-                    'Deleted {numSuccesses, number} {numSuccesses, plural, one {watch} other {watches}}',
+                    '删除了 {numSuccesses, number} {numSuccesses, plural, one {个监控} other {个监控}}',
                   values: { numSuccesses },
                 }
               )

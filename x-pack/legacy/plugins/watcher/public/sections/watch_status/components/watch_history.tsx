@@ -198,7 +198,7 @@ export const WatchHistory = () => {
         {
           field: 'id',
           name: i18n.translate('xpack.watcher.sections.watchHistory.watchActionStatusTable.id', {
-            defaultMessage: 'Name',
+            defaultMessage: '名称',
           }),
           sortable: true,
           truncateText: true,
@@ -206,7 +206,7 @@ export const WatchHistory = () => {
         {
           field: 'state',
           name: i18n.translate('xpack.watcher.sections.watchHistory.watchActionStatusTable.state', {
-            defaultMessage: 'State',
+            defaultMessage: '状态',
           }),
           sortable: true,
           truncateText: true,
@@ -226,7 +226,7 @@ export const WatchHistory = () => {
               <h3 data-test-subj="title">
                 <FormattedMessage
                   id="xpack.watcher.sections.watchHistory.watchHistoryDetail.title"
-                  defaultMessage="Executed on {date}"
+                  defaultMessage="执行于 {date}"
                   values={{ date: watchHistoryDetails.startTime }}
                 />
               </h3>
@@ -238,7 +238,7 @@ export const WatchHistory = () => {
               <h4>
                 <FormattedMessage
                   id="xpack.watcher.sections.watchHistory.watchHistoryDetail.actionsTitle"
-                  defaultMessage="Actions"
+                  defaultMessage="操作"
                 />
               </h4>
             </EuiTitle>
@@ -249,7 +249,7 @@ export const WatchHistory = () => {
               message={
                 <FormattedMessage
                   id="xpack.watcher.sections.watchHistory.watchTable.noWatchesMessage"
-                  defaultMessage="No current status to show"
+                  defaultMessage="当前没有要显示的状态"
                 />
               }
               data-test-subj="watchActionsTable"

@@ -30,13 +30,13 @@ const getTitle = (watch: BaseWatch) => {
     return i18n.translate(
       'xpack.watcher.sections.watchEdit.json.titlePanel.createNewTypeOfWatchTitle',
       {
-        defaultMessage: 'Create {typeName}',
+        defaultMessage: '创建{typeName}',
         values: { typeName },
       }
     );
   } else {
     return i18n.translate('xpack.watcher.sections.watchEdit.json.titlePanel.editWatchTitle', {
-      defaultMessage: 'Edit {watchName}',
+      defaultMessage: '编辑{watchName}',
       values: { watchName: watch.name ? watch.name : watch.id },
     });
   }
@@ -151,7 +151,7 @@ export const WatchEdit = ({
           title={
             <FormattedMessage
               id="xpack.watcher.sections.watchEdit.errorTitle"
-              defaultMessage="Error loading watch"
+              defaultMessage="加载监控时出错"
             />
           }
           error={loadError}
@@ -165,7 +165,7 @@ export const WatchEdit = ({
       <SectionLoading>
         <FormattedMessage
           id="xpack.watcher.sections.watchEdit.loadingWatchDescription"
-          defaultMessage="Loading watch…"
+          defaultMessage="加载监控…"
         />
       </SectionLoading>
     );
