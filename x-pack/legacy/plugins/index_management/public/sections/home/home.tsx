@@ -13,6 +13,7 @@ import {
   EuiFlexItem,
   EuiPageBody,
   EuiPageContent,
+  EuiButton,
   EuiSpacer,
   EuiTab,
   EuiTabs,
@@ -73,19 +74,19 @@ export const IndexManagementHome: React.FunctionComponent<RouteComponentProps<Ma
                 />
               </h1>
             </EuiFlexItem>
-            {/* <EuiFlexItem grow={false}>
-              <EuiButtonEmpty
-                href={idxMgmtDocumentationLink}
-                target="_blank"
-                iconType="help"
-                data-test-subj="documentationLink"
+            <EuiFlexItem grow={false}>
+              <EuiButton
+                iconType="popout"
+                onClick={() => {
+                  window.location.href = String(localStorage.getItem('backLocation'));
+                }}
               >
                 <FormattedMessage
-                  id="xpack.idxMgmt.home.idxMgmtDocsLinkText"
-                  defaultMessage="Index Management docs"
+                  id="core.ui.chrome.headerGlobalNav.helpMenuGoToDocumentation_diy"
+                  defaultMessage="返回生命周期策略"
                 />
-              </EuiButtonEmpty>
-            </EuiFlexItem> */}
+              </EuiButton>
+            </EuiFlexItem>
           </EuiFlexGroup>
         </EuiTitle>
 
