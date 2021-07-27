@@ -196,19 +196,39 @@ export const TemplateForm: React.FunctionComponent<Props> = ({
 
               {currentStep < lastStep ? (
                 <EuiFlexItem grow={false}>
-                  <EuiButton
-                    fill
-                    iconType="arrowRight"
-                    onClick={onNext}
-                    iconSide="right"
-                    disabled={!isStepValid}
-                    data-test-subj="nextButton"
-                  >
-                    <FormattedMessage
-                      id="xpack.idxMgmt.templateForm.nextButtonLabel"
-                      defaultMessage="Next"
-                    />
-                  </EuiButton>
+                  <EuiFlexGroup justifyContent="flexStart">
+                    <EuiFlexItem grow={false}>
+                      <EuiButton
+                        fill
+                        iconType="arrowLeft"
+                        onClick={() => {
+                          window.history.back();
+                        }}
+                        iconSide="left"
+                        data-test-subj="nextButton"
+                      >
+                        <FormattedMessage
+                          id="xpack.idxMgmt.templateForm.nextButtonLabel_diy"
+                          defaultMessage="返回"
+                        />
+                      </EuiButton>
+                    </EuiFlexItem>
+                    <EuiFlexItem grow={false}>
+                      <EuiButton
+                        fill
+                        iconType="arrowRight"
+                        onClick={onNext}
+                        iconSide="right"
+                        disabled={!isStepValid}
+                        data-test-subj="nextButton"
+                      >
+                        <FormattedMessage
+                          id="xpack.idxMgmt.templateForm.nextButtonLabel"
+                          defaultMessage="Next"
+                        />
+                      </EuiButton>
+                    </EuiFlexItem>
+                  </EuiFlexGroup>
                 </EuiFlexItem>
               ) : null}
 

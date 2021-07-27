@@ -245,6 +245,7 @@ export class PolicyTable extends Component {
         name: viewIndicesLabel,
         icon: 'list',
         onClick: () => {
+          localStorage.setItem('backLocation', window.location.href);
           window.location.hash = getIndexListUri(`ilm.policy:${policy.name}`);
         },
       });
