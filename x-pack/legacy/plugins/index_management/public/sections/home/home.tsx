@@ -83,7 +83,7 @@ export const IndexManagementHome: React.FunctionComponent<RouteComponentProps<Ma
               >
                 <FormattedMessage
                   id="core.ui.chrome.headerGlobalNav.helpMenuGoToDocumentation_diy"
-                  defaultMessage="返回生命周期策略"
+                  defaultMessage="返回生命周期策略."
                 />
               </EuiButton>
             </EuiFlexItem>
