@@ -25,8 +25,9 @@ export const areValid = (flags: any) => {
 };
 
 // TODO: xs.length is stringified so its returning a much larger number for length
-export const print = (log: ToolingLog) => (msg: string | null = null) => (xs: any) =>
-  log.success(`\n### Saved Object Types ${msg || 'Count: ' + xs.length}\n${xs}`);
+// @ts-ignore
+export const print = (log: ToolingLog) => (msg: string | null = null) => ({ xs, count }) =>
+  log.success(`\n### Saved Object Types ${msg || 'Count: ' + count}\n${xs}`);
 
 export const expectedFlags = () => ({
   string: ['esUrl'],
@@ -36,4 +37,9 @@ export const expectedFlags = () => ({
 --soTypes           Not Required, tells the svc to show the types within the .kibana index
 --detectionRules    Not required, tells the svc to show the detection rules.
         `,
+});
+
+export const payload = (xs: any) => ({
+  xs: format(xs),
+  count: xs.length,
 });

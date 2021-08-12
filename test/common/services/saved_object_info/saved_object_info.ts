@@ -57,6 +57,7 @@ export class SavedObjectInfoService extends FtrService {
   private readonly config = this.ctx.getService('config');
 
   public async logSoTypes(log: ToolingLog, msg: string | null = null) {
+    // @ts-ignore
     pipe(await types(url.format(this.config.get('servers.elasticsearch'))), print(log)(msg));
   }
 }

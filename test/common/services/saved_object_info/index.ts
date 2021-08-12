@@ -8,7 +8,7 @@
 
 import { run } from '@kbn/dev-utils';
 import { pipe } from 'fp-ts/function';
-import { format, noop, areValid, print, expectedFlags } from './utils';
+import { payload, noop, areValid, print, expectedFlags } from './utils';
 import { types } from './saved_object_info';
 
 export { SavedObjectInfoService } from './saved_object_info';
@@ -17,7 +17,7 @@ export const runSavedObjInfoSvc = () =>
   run(
     async ({ flags, log }) =>
       areValid(flags)
-        ? await pipe(await types(flags.esUrl as string)(), format, print(log)())
+        ? pipe(await types(flags.esUrl as string)(), payload, print(log)())
         : noop(),
     {
       description: `
