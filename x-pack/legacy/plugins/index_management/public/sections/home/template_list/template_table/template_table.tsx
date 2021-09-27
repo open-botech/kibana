@@ -214,7 +214,7 @@ export const TemplateTable: React.FunctionComponent<Props> = ({
     toolsRight: [
       <EuiButton
         style={{
-          background: 'linear-gradient(to right, #5b45ff, #1273ff)',
+          background: '#096dd9',
           color: '#fff',
         }}
         color="secondary"
@@ -229,7 +229,7 @@ export const TemplateTable: React.FunctionComponent<Props> = ({
         />
       </EuiButton>,
       <EuiButton
-        style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+        style={{ background: '#096dd9' }}
         href={`#${BASE_PATH}create_template`}
         fill
         iconType="plusInCircle"

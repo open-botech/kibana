@@ -27,7 +27,7 @@ export function getNodeDownloadInfo(config, platform) {
     ? 'win-x64/node.exe'
     : `node-v${version}-${arch}.tar.gz`;
 
-  const url = `https://nodejs.org/dist/v${version}/${downloadName}`;
+  const url = `http://nodejs.org/dist/v${version}/${downloadName}`;
   const downloadPath = config.resolveFromRepo('.node_binaries', version, basename(downloadName));
   const extractDir = config.resolveFromRepo('.node_binaries', version, arch);
 

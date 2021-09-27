@@ -83,7 +83,7 @@ export const WatchList = () => {
           fill
           data-test-subj="createWatchButton"
           iconType="arrowDown"
-          style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+          style={{ background: '#096dd9' }}
           iconSide="right"
           onClick={() => setIsPopOverOpen(!isPopoverOpen)}
         >
@@ -229,24 +229,24 @@ export const WatchList = () => {
     );
   } else if (availableWatches) {
     const columns = [
-      {
-        field: 'id',
-        name: i18n.translate('xpack.watcher.sections.watchList.watchTable.idHeader', {
-          defaultMessage: 'ID',
-        }),
-        sortable: true,
-        truncateText: true,
-        render: (id: string) => {
-          return (
-            <EuiLink
-              data-test-subj={`watchIdColumn-${id}`}
-              href={`#/management/elasticsearch/watcher/watches/watch/${id}/status`}
-            >
-              {id}
-            </EuiLink>
-          );
-        },
-      },
+      // {
+      //   field: 'id',
+      //   name: i18n.translate('xpack.watcher.sections.watchList.watchTable.idHeader', {
+      //     defaultMessage: 'ID',
+      //   }),
+      //   sortable: true,
+      //   truncateText: true,
+      //   render: (id: string) => {
+      //     return (
+      //       <EuiLink
+      //         data-test-subj={`watchIdColumn-${id}`}
+      //         href={`#/management/elasticsearch/watcher/watches/watch/${id}/status`}
+      //       >
+      //         {id}
+      //       </EuiLink>
+      //     );
+      //   },
+      // },
       {
         field: 'name',
         name: i18n.translate('xpack.watcher.sections.watchList.watchTable.nameHeader', {
@@ -264,7 +264,7 @@ export const WatchList = () => {
           defaultMessage: '告警状态',
         }),
         sortable: true,
-        width: '130px',
+        width: '160px',
         render: (state: string) => <WatchStatus status={state} />,
       },
       {
@@ -274,7 +274,7 @@ export const WatchList = () => {
         }),
         sortable: true,
         truncateText: true,
-        width: '130px',
+        width: '160px',
         render: (lastMetCondition: Moment) => {
           return lastMetCondition ? lastMetCondition.fromNow() : lastMetCondition;
         },
@@ -286,7 +286,7 @@ export const WatchList = () => {
         }),
         sortable: true,
         truncateText: true,
-        width: '130px',
+        width: '160px',
         render: (lastChecked: Moment) => {
           return lastChecked ? lastChecked.fromNow() : lastChecked;
         },

@@ -162,7 +162,7 @@ export const PolicyForm: React.FunctionComponent<Props> = ({
                     iconType="arrowRight"
                     onClick={() => onNext()}
                     disabled={!validation.isValid}
-                    style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+                    style={{ background: '#096dd9' }}
                   >
                     <FormattedMessage
                       id="xpack.snapshotRestore.policyForm.nextButtonLabel"
@@ -179,7 +179,7 @@ export const PolicyForm: React.FunctionComponent<Props> = ({
                     iconType="check"
                     onClick={() => savePolicy()}
                     isLoading={isSaving}
-                    style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+                    style={{ background: '#096dd9' }}
                   >
                     {isSaving ? (
                       <FormattedMessage

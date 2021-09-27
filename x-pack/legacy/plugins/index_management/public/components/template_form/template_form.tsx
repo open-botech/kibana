@@ -235,7 +235,7 @@ export const TemplateForm: React.FunctionComponent<Props> = ({
               {currentStep === lastStep ? (
                 <EuiFlexItem grow={false}>
                   <EuiButton
-                    style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+                    style={{ background: '#096dd9' }}
                     fill
                     color="secondary"
                     iconType="check"

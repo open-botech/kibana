@@ -318,7 +318,7 @@ export const SnapshotTable: React.FunctionComponent<Props> = ({
         onClick={reload}
         data-test-subj="reloadButton"
         style={{
-          background: 'linear-gradient(to right, #5b45ff, #1273ff)',
+          background: '#096dd9',
           color: '#fff',
         }}
       >

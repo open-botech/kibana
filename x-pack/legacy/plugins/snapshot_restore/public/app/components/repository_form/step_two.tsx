@@ -152,7 +152,7 @@ export const RepositoryFormStepTwo: React.FunctionComponent<Props> = ({
             fill={isManagedRepository ? false : true}
             data-test-subj="submitButton"
             isLoading={isSaving}
-            style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+            style={{ background: '#096dd9' }}
           >
             {isSaving ? savingLabel : saveLabel}
           </EuiButton>

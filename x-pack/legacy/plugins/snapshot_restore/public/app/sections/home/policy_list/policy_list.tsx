@@ -124,7 +124,7 @@ export const PolicyList: React.FunctionComponent<RouteComponentProps<MatchParams
             fill
             iconType="plusInCircle"
             data-test-subj="createPolicyButton"
-            style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+            style={{ background: '#096dd9' }}
           >
             <FormattedMessage
               id="xpack.snapshotRestore.createPolicyButton"

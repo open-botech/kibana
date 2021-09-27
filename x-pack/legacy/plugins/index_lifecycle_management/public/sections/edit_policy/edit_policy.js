@@ -324,7 +324,7 @@ export class EditPolicy extends Component {
                         iconSide="left"
                         onClick={this.submit}
                         color="secondary"
-                        style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+                        style={{ background: '#096dd9' }}
                       >
                         {saveAsNewPolicy ? (
                           <FormattedMessage

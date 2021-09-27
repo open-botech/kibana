@@ -354,7 +354,7 @@ export const RepositoryFormStepOne: React.FunctionComponent<Props> = ({
             iconType="arrowLeft"
             iconSide="left"
             data-test-subj="nextButton"
-            style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+            style={{ background: '#096dd9' }}
           >
             <FormattedMessage
               id="xpack.snapshotRestore.repositoryForm.nextButtonLabel_diy"
@@ -370,7 +370,7 @@ export const RepositoryFormStepOne: React.FunctionComponent<Props> = ({
             iconType="arrowRight"
             iconSide="right"
             data-test-subj="nextButton"
-            style={{ background: 'linear-gradient(to right, #5b45ff, #1273ff)' }}
+            style={{ background: '#096dd9' }}
           >
             <FormattedMessage
               id="xpack.snapshotRestore.repositoryForm.nextButtonLabel"

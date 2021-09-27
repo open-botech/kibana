@@ -875,7 +875,7 @@ export const ThresholdWatchEdit = ({ pageTitle }: { pageTitle: string }) => {
               data-test-subj="saveWatchButton"
               type="submit"
               style={{
-                background: 'linear-gradient(to right, #5b45ff, #1273ff)',
+                background: '#096dd9',
                 border: '1px solid transparent',
               }}
               iconType="check"
