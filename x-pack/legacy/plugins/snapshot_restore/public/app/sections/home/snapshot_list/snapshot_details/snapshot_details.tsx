@@ -61,8 +61,8 @@ export const SnapshotDetails: React.FunctionComponent<Props> = ({
   } = useAppDependencies();
   const { FormattedMessage } = i18n;
   const { trackUiMetric } = uiMetricService;
-  const { error, data: snapshotDetails } = useLoadSnapshot(repositoryName, snapshotId);
-  const { data: stats } = useLoadSnapshotStatus(repositoryName, snapshotId);
+  let { error, data: snapshotDetails } = useLoadSnapshot(repositoryName, snapshotId);
+  const {error: error2, data: stats} = useLoadSnapshotStatus(repositoryName, snapshotId)
   const [activeTab, setActiveTab] = useState<string>(TAB_SUMMARY);
 
   // Reset tab when we look at a different snapshot.
