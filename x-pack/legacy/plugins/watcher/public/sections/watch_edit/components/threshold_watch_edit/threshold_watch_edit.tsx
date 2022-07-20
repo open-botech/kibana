@@ -38,6 +38,8 @@ import { WatchVisualization } from './watch_visualization';
 import { WatchActionsPanel } from './threshold_watch_action_panel';
 import { getTimeUnitLabel } from '../../../../lib/get_time_unit_label';
 import { goToWatchList } from '../../../../lib/navigation';
+import { EuiDatePicker } from '@elastic/eui';
+import moment from 'moment';
 
 const expressionFieldsWithValidation = [
   'aggField',
@@ -218,6 +220,8 @@ export const ThresholdWatchEdit = ({ pageTitle }: { pageTitle: string }) => {
     defaultMessage: 'AND',
   });
 
+  const [startDate, setStartDate] = useState(moment());
+
   return (
     <EuiPageContent>
       <EuiFlexGroup justifyContent="spaceBetween" alignItems="flexEnd">
@@ -370,6 +374,25 @@ export const ThresholdWatchEdit = ({ pageTitle }: { pageTitle: string }) => {
                   }
                 }}
               />
+            </ErrableFormRow>
+          </EuiFlexItem>
+          <EuiFlexItem grow={false}>
+            <ErrableFormRow
+              id="startTimeField"
+              fullWidth
+              label={
+                <FormattedMessage
+                  id="xpack.watcher.sections.watchEdit.titlePanel.startTimeFieldLabel"
+                  defaultMessage="Time field"
+                />
+              }
+              errorKey="timeField"
+              isShowingErrors={hasErrors && watch.timeField !== undefined}
+              errors={errors}
+            >
+              <EuiDatePicker selected={startDate} onChange={date => {
+                  setStartDate(date);
+                }} />
             </ErrableFormRow>
           </EuiFlexItem>
           <EuiFlexItem>
