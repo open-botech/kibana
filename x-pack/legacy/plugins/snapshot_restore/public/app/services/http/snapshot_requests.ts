@@ -26,6 +26,16 @@ export const useLoadSnapshot = (repositoryName: string, snapshotId: string) =>
     method: 'get',
   });
 
+export const useLoadSnapshotStatus = (repositoryName: string, snapshotId: string) =>
+  useRequest({
+    path: httpService.addBasePath(
+      `${API_BASE_PATH}snapshotstatus/${encodeURIComponent(repositoryName)}/${encodeURIComponent(
+        snapshotId
+      )}`
+    ),
+    method: 'get',
+  });
+
 export const deleteSnapshots = async (
   snapshotIds: Array<{ snapshot: string; repository: string }>
 ) => {

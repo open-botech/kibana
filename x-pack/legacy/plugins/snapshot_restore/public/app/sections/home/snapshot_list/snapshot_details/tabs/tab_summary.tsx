@@ -28,9 +28,10 @@ import { SnapshotState } from './snapshot_state';
 
 interface Props {
   snapshotDetails: SnapshotDetails;
+  stats?: any;
 }
 
-export const TabSummary: React.SFC<Props> = ({ snapshotDetails }) => {
+export const TabSummary: React.SFC<Props> = ({ snapshotDetails, stats}) => {
   const {
     core: {
       i18n: { FormattedMessage },
@@ -50,7 +51,15 @@ export const TabSummary: React.SFC<Props> = ({ snapshotDetails }) => {
     durationInMillis,
     uuid,
     policyName,
+    snapshotStatus
   } = snapshotDetails;
+
+  let file_count=0, size_in_bytes=0
+  const { snapshots } = stats
+  if(snapshots.length) {
+    file_count = snapshots[0].stats.total.file_count
+    size_in_bytes = snapshots[0].stats.total.size_in_bytes
+  }
 
   // Only show 10 indices initially
   const [isShowingFullIndicesList, setIsShowingFullIndicesList] = useState<boolean>(false);
@@ -278,6 +287,63 @@ export const TabSummary: React.SFC<Props> = ({ snapshotDetails }) => {
             </EuiDescriptionListDescription>
           </EuiFlexItem>
         ) : null}
+      </EuiFlexGroup>
+
+
+      <EuiFlexGroup>
+        <EuiFlexItem data-test-subj="fileCount">
+          <EuiDescriptionListTitle data-test-subj="title">
+            <FormattedMessage
+              id="xpack.snapshotRestore.snapshotDetails.fileCountLabel"
+              defaultMessage="fileCount"
+            />
+          </EuiDescriptionListTitle>
+
+          <EuiDescriptionListDescription className="eui-textBreakWord" data-test-subj="value">
+            {file_count}
+          </EuiDescriptionListDescription>
+        </EuiFlexItem>
+
+        <EuiFlexItem data-test-subj="policy">
+          <EuiDescriptionListTitle data-test-subj="title">
+            <FormattedMessage
+              id="xpack.snapshotRestore.snapshotDetails.fileSizeTotalLabel"
+              defaultMessage="fileSizeTotal"
+            />
+          </EuiDescriptionListTitle>
+
+          <EuiDescriptionListDescription className="eui-textBreakWord" data-test-subj="value">
+            {(size_in_bytes/1024).toFixed(2)}M
+          </EuiDescriptionListDescription>
+        </EuiFlexItem>
+      </EuiFlexGroup>
+
+      <EuiFlexGroup>
+        <EuiFlexItem data-test-subj="fileCount">
+          <EuiDescriptionListTitle data-test-subj="title">
+            <FormattedMessage
+              id="xpack.snapshotRestore.snapshotDetails.fileCompleteCountLabel"
+              defaultMessage="fileCount"
+            />
+          </EuiDescriptionListTitle>
+
+          <EuiDescriptionListDescription className="eui-textBreakWord" data-test-subj="value">
+          {file_count}
+          </EuiDescriptionListDescription>
+        </EuiFlexItem>
+
+        <EuiFlexItem data-test-subj="policy">
+          <EuiDescriptionListTitle data-test-subj="title">
+            <FormattedMessage
+              id="xpack.snapshotRestore.snapshotDetails.fileSizeCompleteTotalLabel"
+              defaultMessage="fileSizeTotal"
+            />
+          </EuiDescriptionListTitle>
+
+          <EuiDescriptionListDescription className="eui-textBreakWord" data-test-subj="value">
+          {(size_in_bytes/1024).toFixed(2)}M
+          </EuiDescriptionListDescription>
+        </EuiFlexItem>
       </EuiFlexGroup>
     </EuiDescriptionList>
   );

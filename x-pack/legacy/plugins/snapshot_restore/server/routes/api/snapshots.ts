@@ -16,6 +16,7 @@ export function registerSnapshotsRoutes(router: Router, plugins: Plugins) {
   callWithInternalUser = plugins.elasticsearch.getCluster('data').callWithInternalUser;
   router.get('snapshots', getAllHandler);
   router.get('snapshots/{repository}/{snapshot}', getOneHandler);
+  router.get('snapshotstatus/{repository}/{snapshot}', getStatusHandler);
   router.delete('snapshots/{ids}', deleteHandler);
 }
 
@@ -87,6 +88,23 @@ export const getAllHandler: RouterRouteHandler = async (
     repositories,
     errors,
   };
+};
+
+export const getStatusHandler: RouterRouteHandler = async (
+  req,
+  callWithRequest
+): Promise<SnapshotDetails> => {
+  const { repository, snapshot } = req.params;
+  const managedRepository = await getManagedRepositoryName(callWithInternalUser);
+  const result = await callWithRequest('snapshot.status', {
+    repository,
+    snapshot,
+  });
+
+  return result
+
+  // If the snapshot is missing the endpoint will return a 404, so we'll never get to this point.
+  //return deserializeSnapshotDetails(repository, snapshots[0], managedRepository);
 };
 
 export const getOneHandler: RouterRouteHandler = async (

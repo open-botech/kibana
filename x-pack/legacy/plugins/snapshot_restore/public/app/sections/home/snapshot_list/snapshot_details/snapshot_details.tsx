@@ -30,7 +30,7 @@ import {
   UIM_SNAPSHOT_DETAIL_PANEL_FAILED_INDICES_TAB,
   SNAPSHOT_STATE,
 } from '../../../../constants';
-import { useLoadSnapshot } from '../../../../services/http';
+import { useLoadSnapshot, useLoadSnapshotStatus } from '../../../../services/http';
 import { linkToRepository, linkToRestoreSnapshot } from '../../../../services/navigation';
 import { uiMetricService } from '../../../../services/ui_metric';
 import { TabSummary, TabFailures } from './tabs';
@@ -62,7 +62,7 @@ export const SnapshotDetails: React.FunctionComponent<Props> = ({
   const { FormattedMessage } = i18n;
   const { trackUiMetric } = uiMetricService;
   const { error, data: snapshotDetails } = useLoadSnapshot(repositoryName, snapshotId);
-
+  const { data: stats } = useLoadSnapshotStatus(repositoryName, snapshotId);
   const [activeTab, setActiveTab] = useState<string>(TAB_SUMMARY);
 
   // Reset tab when we look at a different snapshot.
@@ -120,7 +120,7 @@ export const SnapshotDetails: React.FunctionComponent<Props> = ({
     );
 
     if (activeTab === TAB_SUMMARY) {
-      content = <TabSummary snapshotDetails={snapshotDetails} />;
+      content = <TabSummary snapshotDetails={snapshotDetails} stats={stats} />;
     } else if (activeTab === TAB_FAILURES) {
       content = <TabFailures snapshotState={snapshotState} indexFailures={indexFailures} />;
     }
