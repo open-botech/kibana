@@ -55,11 +55,14 @@ export const TabSummary: React.SFC<Props> = ({ snapshotDetails, stats}) => {
   } = snapshotDetails;
 
   let file_count=0, size_in_bytes=0
-  const { snapshots } = stats
-  if(snapshots.length) {
-    file_count = snapshots[0].stats.total.file_count
-    size_in_bytes = snapshots[0].stats.total.size_in_bytes
+  if(stats) {
+    const snapshots = stats.snapshots || []
+    if(snapshots.length) {
+      file_count = snapshots[0].stats.total.file_count
+      size_in_bytes = snapshots[0].stats.total.size_in_bytes
+    }
   }
+
 
   // Only show 10 indices initially
   const [isShowingFullIndicesList, setIsShowingFullIndicesList] = useState<boolean>(false);
