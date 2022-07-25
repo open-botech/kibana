@@ -18,4 +18,4 @@
  */
 
 require('../src/setup_node_env/babel_register');
-require('../src/dev/run_precommit_hook');
+//require('../src/dev/run_precommit_hook');
